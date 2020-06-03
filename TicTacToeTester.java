@@ -1,6 +1,5 @@
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class TicTacToeTester {
 	private static TicTacToeClass ttt;
@@ -85,54 +84,6 @@ public class TicTacToeTester {
 		System.out.println("  [ok]");
 		System.out.println("\nAll tests passed!\n");
 		
-		// start a game - main driver code
-		// game variables
-		boolean gameIsOver = false;
-		int playerXRow, playerXCol, playerORow, playerOCol;
-		
-		TicTacToeClass game1 = new TicTacToeClass();
-		System.out.println("Welcome to Tic-Tac-Toe Player X and Player O! Player X will go first.");
-		Scanner scan = new Scanner(System.in);
-
-		while(gameIsOver==false) {
-			// X turn
-			System.out.println();
-			game1.displayBoard();
-			System.out.print("\n'X', choose your location (row, column): ");
-			playerXRow = scan.nextInt();
-			playerXCol = scan.nextInt();
-			game1.playMove('X', playerXRow, playerXCol);
-			
-			if(game1.isWinner('X') == true) {
-				game1.displayBoard();
-				System.out.println("\nCongratulations Player X, you won!");
-				gameIsOver = true;
-			} else if(game1.isCat() == true) {
-				game1.displayBoard();
-				System.out.println("\nIt's a tie!");
-				gameIsOver = true;
-			}
-			// manually break if X is a winner or there is a tie after X's move
-			if(gameIsOver==true) {
-				break;
-			}
-			
-			// O turn
-			System.out.println();
-			game1.displayBoard();
-			System.out.print("\n'O', choose your location (row, column): ");
-			playerORow = scan.nextInt();
-			playerOCol = scan.nextInt();
-			game1.playMove('O', playerORow, playerOCol);
-			
-			if(game1.isWinner('O') == true) {
-				game1.displayBoard();
-				System.out.println("\nCongratulations Player X, you won!");
-				gameIsOver = true;
-			}
-			// if X is always the first player, O will never have a chance to be the last move before a tie
-		}
-		scan.close();
 	}
 
 	private static void check(String property, boolean is, boolean shouldbe) {
