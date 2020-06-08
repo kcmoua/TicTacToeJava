@@ -91,17 +91,18 @@ public class TicTacToeClass {
 		board[r][c]=p;
 		turns++;
 	}
-	
-	public void clearBoard() {
-		for(int r=0;r<3;r++) {
-			for(int c=0;c<3;c++) {
-				board[r][c]=' ';
-			}
-		}
-	}
-	
-	public void resetTurns() {
-		turns = 0;
-	}
+
+//	original methods for the first code 
+//	public void clearBoard() {
+//		for(int r=0;r<3;r++) {
+//			for(int c=0;c<3;c++) {
+//				board[r][c]=' ';
+//			}
+//		}
+//	}
+//	
+//	public void resetTurns() {
+//		turns = 0;
+//	}
 
 }
